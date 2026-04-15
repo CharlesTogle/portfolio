@@ -1,0 +1,289 @@
+:root {
+  --bg: #0d0b14;
+  --terminal: #110f1a;
+  --text: #e2dff0;
+  --prompt: #9333ea;
+  --accent: #d946ef;
+  --value: #60a5fa;
+  --dim: #4b4466;
+  --cursor: #9333ea;
+}
+
+[data-theme="light"] {
+  --bg: #f0eef8;
+  --terminal: #ffffff;
+  --text: #1a0a2e;
+  --prompt: #7c22d4;
+  --accent: #b91cc8;
+  --value: #2563eb;
+  --dim: #9a90b8;
+  --cursor: #7c22d4;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace;
+  font-size: 14px;
+  line-height: 1.7;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* ── Cosmic background ── */
+#cosmos {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#cosmos::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(147, 51, 234, 0.08) 0%, transparent 70%);
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+}
+
+/* ── Theme toggle ── */
+#theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 100;
+  font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace;
+  font-size: 12px;
+  background: none;
+  border: 1px solid var(--dim);
+  color: var(--dim);
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+#theme-toggle:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+/* ── Terminal window ── */
+.terminal-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  margin: 40px auto;
+  padding: 0 16px 40px;
+}
+
+.terminal {
+  background: var(--terminal);
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(147, 51, 234, 0.15);
+  overflow: hidden;
+}
+
+.title-bar {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--dim);
+  position: relative;
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot-red    { background: #ff5f57; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green  { background: #28ca41; }
+
+.title-label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--dim);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* ── Content ── */
+.content {
+  padding: 32px;
+}
+
+.block {
+  margin-bottom: 28px;
+}
+
+.prompt-line {
+  user-select: none;
+}
+
+.prompt {
+  color: var(--prompt);
+}
+
+.command {
+  color: var(--text);
+}
+
+/* Output lines — hidden until JS reveals on scroll */
+.output {
+  padding-left: 16px;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.dim    { color: var(--dim); }
+.accent { color: var(--accent); }
+.value  { color: var(--value); }
+
+/* Contact links */
+.link {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.link:hover {
+  border-bottom-color: currentColor;
+}
+
+/* ── Blinking cursor ── */
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background: var(--cursor);
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Neofetch ── */
+.neofetch {
+  display: flex;
+  gap: 32px;
+  padding: 8px 0 4px 16px;
+  align-items: flex-start;
+  opacity: 0;              /* revealed by JS after command types */
+}
+
+.nf-image {
+  flex-shrink: 0;
+}
+
+.nf-image img {
+  width: 190px;
+  height: auto;
+  display: block;
+  border: 1px solid var(--prompt);
+  box-shadow: 0 0 24px rgba(147, 51, 234, 0.3);
+  opacity: 0;              /* revealed by JS */
+  transition: opacity 0.45s ease;
+}
+
+.nf-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.nf-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.nf-sep {
+  color: var(--prompt);
+  margin-bottom: 2px;
+}
+
+.nf-gap {
+  height: 0.5em;
+}
+
+/* Each row starts hidden, JS cascades them in */
+.nf-row {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1px;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nf-key {
+  color: var(--accent);
+  min-width: 82px;
+  flex-shrink: 0;
+}
+
+.nf-colors {
+  display: flex;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.nf-c {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  html, body { font-size: 12px; }
+
+  .terminal-wrap {
+    margin: 16px auto;
+    padding: 0 8px 24px;
+  }
+
+  .content {
+    padding: 20px 14px;
+  }
+
+  .title-label { font-size: 11px; }
+
+  .neofetch {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 0;
+  }
+
+  .nf-image img {
+    width: 140px;
+  }
+
+  .nf-key {
+    min-width: 68px;
+  }
+}

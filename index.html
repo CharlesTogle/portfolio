@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>charles@portfolio: ~</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div id="cosmos"></div>
+  <button id="theme-toggle" aria-label="Toggle theme">[light]</button>
+
+  <div class="terminal-wrap">
+    <div class="terminal">
+
+      <div class="title-bar">
+        <div class="dots">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+        </div>
+        <span class="title-label">charles@portfolio: ~</span>
+      </div>
+
+      <div class="content">
+
+        <!-- neofetch -->
+        <div class="block" id="nf-block">
+          <div class="prompt-line">
+            <span class="prompt">charles@portfolio:~$</span> <span class="command" data-cmd="neofetch"></span>
+          </div>
+          <div class="neofetch">
+            <div class="nf-image">
+              <img id="nf-img" src="day.png" alt="charles" />
+            </div>
+            <div class="nf-info">
+              <div class="nf-row nf-title"><span class="accent">charles</span><span class="dim">@</span><span class="value">charlinux</span></div>
+              <div class="nf-row nf-sep">─────────────────────</div>
+              <div class="nf-row"><span class="nf-key">Role</span><span class="dim"> : </span><span class="value">Full Stack Software Engineer</span></div>
+              <div class="nf-row"><span class="nf-key">Status</span><span class="dim"> : </span><span class="value">Open for opportunities</span></div>
+              <div class="nf-row"><span class="nf-key">Stack</span><span class="dim"> : </span><span class="value">React · Node.js · PostgreSQL · AWS</span></div>
+              <div class="nf-row"><span class="nf-key">School</span><span class="dim"> : </span><span class="value">B.S. CS @ UMak (2027)</span></div>
+              <div class="nf-row nf-gap"></div>
+              <div class="nf-row"><span class="nf-key">OS</span><span class="dim"> : </span><span class="value">Arch Linux x86_64</span></div>
+              <div class="nf-row"><span class="nf-key">Kernel</span><span class="dim"> : </span><span class="value">6.19.11-arch1-1</span></div>
+              <div class="nf-row"><span class="nf-key">DE</span><span class="dim"> : </span><span class="value">Hyprland</span></div>
+              <div class="nf-row"><span class="nf-key">Terminal</span><span class="dim"> : </span><span class="value">kitty</span></div>
+              <div class="nf-row"><span class="nf-key">Editor</span><span class="dim"> : </span><span class="value">nvim + Claude Code</span></div>
+              <div class="nf-row nf-gap"></div>
+              <div class="nf-row nf-colors">
+                <span class="nf-c" style="background:#ff5f57"></span>
+                <span class="nf-c" style="background:#ffbd2e"></span>
+                <span class="nf-c" style="background:#28ca41"></span>
+                <span class="nf-c" style="background:#9333ea"></span>
+                <span class="nf-c" style="background:#d946ef"></span>
+                <span class="nf-c" style="background:#60a5fa"></span>
+                <span class="nf-c" style="background:#e2dff0"></span>
+                <span class="nf-c" style="background:#4b4466"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- story -->
+        <div class="block">
+          <div class="prompt-line">
+            <span class="prompt">charles@portfolio:~$</span> <span class="command" data-cmd="cat charles.txt | grep 'story'"></span>
+          </div>
+          <div class="output"><span class="dim">&gt;</span> <span class="value">Mar 2024</span> — Afraid of React. Did it anyway.</div>
+          <div class="output"><span class="dim">&gt;</span> Brute-forced docs. Broke websites. Joined hackathons.</div>
+          <div class="output"><span class="dim">&gt;</span> Shipped fitness platform. Got the job. Got promoted twice.</div>
+          <div class="output"><span class="dim">&gt;</span> Now open — for new pressure, new things to learn.</div>
+        </div>
+
+        <!-- timeline -->
+        <div class="block">
+          <div class="prompt-line">
+            <span class="prompt">charles@portfolio:~$</span> <span class="command" data-cmd="cat charles.txt | grep 'timeline'"></span>
+          </div>
+          <div class="output"><span class="dim">&gt;</span> <span class="value">Mar 2024  </span> <span class="dim">—</span> Started React. Afraid. Did it anyway.</div>
+          <div class="output"><span class="dim">&gt;</span> <span class="value">Jan 2025  </span> <span class="dim">—</span> Aced course. Picked up professor's thesis.</div>
+          <div class="output"><span class="dim">&gt;</span> <span class="value">Apr 2025  </span> <span class="dim">—</span> Shipped multitenant fitness platform in <span class="value">3 months</span>.</div>
+          <div class="output"><span class="dim">&gt;</span> <span class="value">Apr 2025  </span> <span class="dim">—</span> Job posting on Discord. Afraid. Applied anyway.</div>
+          <div class="output"><span class="dim">&gt;</span> <span class="value">Sep 2025  </span> <span class="dim">—</span> Joined Centervert as consultant.</div>
+          <div class="output"><span class="dim">&gt;</span> <span class="value">Oct 2025  </span> <span class="dim">—</span> Promoted to Full Stack Software Engineer.</div>
+          <div class="output"><span class="dim">&gt;</span> <span class="value">Early 2026</span> <span class="dim">—</span> Promoted to Dev Specialist.</div>
+          <div class="output"><span class="dim">&gt;</span> <span class="value">Apr 2026  </span> <span class="dim">—</span> Open for new opportunities.</div>
+        </div>
+
+        <!-- experience (combined) -->
+        <div class="block">
+          <div class="prompt-line">
+            <span class="prompt">charles@portfolio:~$</span> <span class="command" data-cmd="cat experience.txt"></span>
+          </div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">Dev Specialist</span> <span class="dim">—</span> Centervert &nbsp;<span class="value">[Sep 2025 – Apr 2026]</span></div>
+          <div class="output"><span class="dim">&gt;</span> &nbsp;• Supabase DB managing <span class="value">460K+</span> running records</div>
+          <div class="output"><span class="dim">&gt;</span> &nbsp;• Einstein DB <span class="dim">→</span> Supabase via GCP Cloud Run + cron (idempotent upserts)</div>
+          <div class="output"><span class="dim">&gt;</span> &nbsp;• Edge Functions + GHL API — saved <span class="value">4–6 hrs/day</span>, cut <span class="value">5 FTEs</span></div>
+          <div class="output"><span class="dim">&gt;</span> &nbsp;• AWS CMS dashboard (S3, CloudFront, Route53, Next.js)</div>
+          <div class="output"><span class="dim">&gt;</span> &nbsp;• Migrated <span class="value">2</span> apps: DigitalOcean <span class="dim">→</span> AWS Lightsail + Nginx + RDS</div>
+          <div class="output"><span class="dim">&gt;</span></div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">Developer &amp; PM</span> <span class="dim">—</span> Hope Hub &nbsp;<span class="value">[Jan 2025 – Present]</span></div>
+          <div class="output"><span class="dim">&gt;</span> &nbsp;• Multitenant fitness education platform (React, PostgreSQL, Supabase)</div>
+          <div class="output"><span class="dim">&gt;</span> &nbsp;• RBAC across <span class="value">4</span> modules: Lectures, Quizzes, Fitness, Workout Zone</div>
+          <div class="output"><span class="dim">&gt;</span> &nbsp;• localStorage caching — <span class="value">3–5s</span> load time reduction per page</div>
+          <div class="output"><span class="dim">&gt;</span></div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">Sole Developer</span> <span class="dim">—</span> UMak-Link &nbsp;<span class="value">[In Development]</span></div>
+          <div class="output"><span class="dim">&gt;</span> &nbsp;• Lost &amp; found platform — web + mobile (React, Capacitor, FastifyJS, Supabase)</div>
+          <div class="output"><span class="dim">&gt;</span> &nbsp;• Gemini vision <span class="dim">→</span> metadata + PostgreSQL similarity search</div>
+        </div>
+
+        <!-- education (combined) -->
+        <div class="block">
+          <div class="prompt-line">
+            <span class="prompt">charles@portfolio:~$</span> <span class="command" data-cmd="cat education.txt"></span>
+          </div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">University of Makati</span> <span class="dim">—</span> B.S. Computer Science, Application Development</div>
+          <div class="output"><span class="dim">&gt;</span> &nbsp; Expected <span class="value">July 2027</span> &nbsp;|&nbsp; Consistent Dean's Lister</div>
+          <div class="output"><span class="dim">&gt;</span></div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">Pasay City National Science High School</span></div>
+          <div class="output"><span class="dim">&gt;</span> &nbsp; Graduated With Honors &nbsp;|&nbsp; <span class="value">June 2022</span></div>
+        </div>
+
+        <!-- skills (combined) -->
+        <div class="block">
+          <div class="prompt-line">
+            <span class="prompt">charles@portfolio:~$</span> <span class="command" data-cmd="cat skills.txt"></span>
+          </div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">Backend  </span> <span class="dim">:</span> <span class="value">Node.js, FastifyJS, Supabase Edge Functions, REST APIs</span></div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">Frontend </span> <span class="dim">:</span> <span class="value">ReactJS, Next.js, Hono, Figma</span></div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">Infra    </span> <span class="dim">:</span> <span class="value">Linux, VPS, SSH, Nginx, Docker</span></div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">Cloud    </span> <span class="dim">:</span> <span class="value">AWS (S3, CloudFront, RDS, Route53, Lightsail), GCP, Vercel</span></div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">Database </span> <span class="dim">:</span> <span class="value">PostgreSQL, MySQL, Supabase</span></div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">DevOps   </span> <span class="dim">:</span> <span class="value">Git &amp; GitHub, Linux, SSH</span></div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">AI Tools </span> <span class="dim">:</span> <span class="value">Claude Code, Copilot, Codex, Greptile, CodeRabbit</span></div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">Languages</span> <span class="dim">:</span> <span class="value">Filipino (Native), English (Professional)</span></div>
+        </div>
+
+        <!-- achievements -->
+        <div class="block">
+          <div class="prompt-line">
+            <span class="prompt">charles@portfolio:~$</span> <span class="command" data-cmd="cat achievements.txt"></span>
+          </div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">1st Place</span> <span class="dim">—</span> Java Speed Coding, UMak <span class="value">(2024 &amp; 2025)</span> — beat <span class="value">15+</span> pairs</div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">IT Skills Olympics</span> <span class="dim">—</span> Java, UMak rep <span class="value">(2024 &amp; 2025)</span> — <span class="value">6th</span> of <span class="value">60</span> universities <span class="value">(2024)</span></div>
+        </div>
+
+        <!-- contact -->
+        <div class="block">
+          <div class="prompt-line">
+            <span class="prompt">charles@portfolio:~$</span> <span class="command" data-cmd="cat contact.txt"></span>
+          </div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">email </span> <span class="dim">:</span> <a href="mailto:charles3togle@gmail.com" class="value link">charles3togle@gmail.com</a></div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">phone </span> <span class="dim">:</span> <span class="value">09281995178</span></div>
+          <div class="output"><span class="dim">&gt;</span> <span class="accent">github</span> <span class="dim">:</span> <a href="https://github.com/CharlesTogle" class="value link" target="_blank" rel="noopener">github.com/CharlesTogle</a></div>
+        </div>
+
+        <!-- cursor -->
+        <div class="block" id="cursor-block">
+          <div class="prompt-line">
+            <span class="prompt">charles@portfolio:~$</span> <span class="cursor"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ── Stars ── */
+    (function () {
+      const cosmos = document.getElementById('cosmos');
+      for (let i = 0; i < 120; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const sz = Math.random() < 0.5 ? 1 : 2;
+        s.style.cssText = `width:${sz}px;height:${sz}px;top:${(Math.random()*100).toFixed(2)}%;left:${(Math.random()*100).toFixed(2)}%;opacity:${(Math.random()*0.3+0.1).toFixed(2)};background:${Math.random()<0.25?'#a855f7':'white'}`;
+        cosmos.appendChild(s);
+      }
+    })();
+
+    /* ── Theme + image swap ── */
+    (function () {
+      const btn = document.getElementById('theme-toggle');
+      const img = document.getElementById('nf-img');
+      btn.addEventListener('click', function () {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        if (isLight) {
+          document.documentElement.removeAttribute('data-theme');
+          btn.textContent = '[light]';
+          img.src = 'day.png';
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          btn.textContent = '[dark]';
+          img.src = 'light.jpg';
+        }
+      });
+    })();
+
+    /* ── Animation system ── */
+    const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function typeText(el, text, speed, done) {
+      if (REDUCED) { el.textContent = text; done && done(); return; }
+      let i = 0;
+      el.textContent = '';
+      const t = setInterval(() => {
+        el.textContent += text[i++];
+        if (i >= text.length) { clearInterval(t); done && done(); }
+      }, speed);
+    }
+
+    function revealOutputs(outputs, delayEach) {
+      outputs.forEach((el, i) => {
+        if (REDUCED) { el.style.opacity = '1'; el.style.transform = 'none'; return; }
+        setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'translateX(0)'; }, i * delayEach);
+      });
+    }
+
+    function animateBlock(block) {
+      if (block.dataset.animated) return;
+      block.dataset.animated = '1';
+      const cmdEl = block.querySelector('.command');
+
+      if (block.id === 'nf-block') {
+        typeText(cmdEl, 'neofetch', 55, () => {
+          const nfDiv = block.querySelector('.neofetch');
+          const img = document.getElementById('nf-img');
+          const rows = [...block.querySelectorAll('.nf-row')];
+          nfDiv.style.transition = 'opacity 0.3s ease';
+          nfDiv.style.opacity = '1';
+          setTimeout(() => { img.style.opacity = '1'; }, 200);
+          rows.forEach((r, i) => {
+            setTimeout(() => { r.style.opacity = '1'; r.style.transform = 'none'; }, 350 + i * 55);
+          });
+        });
+        return;
+      }
+
+      if (block.id === 'cursor-block') return;
+
+      const outputs = [...block.querySelectorAll('.output')];
+      if (cmdEl) {
+        typeText(cmdEl, cmdEl.dataset.cmd || '', 22, () => revealOutputs(outputs, 65));
+      }
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { animateBlock(e.target); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.block').forEach(b => observer.observe(b));
+  </script>
+
+</body>
+</html>
